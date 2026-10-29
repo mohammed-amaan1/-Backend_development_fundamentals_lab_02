@@ -6,9 +6,14 @@ const sqlite3 = require("sqlite3");
 const app = express();
 app.use(express.json());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const dbPath = path.join(__dirname, "books.db");
 let db = null;
+
+// Welcome route
+app.get("/", (request, response) => {
+  response.send("Lab 2: SQLite database and CRUD routes server is running live!");
+});
 
 // Initialize Database connection and start the server
 const initializeDBAndServer = async () => {
@@ -129,3 +134,6 @@ app.delete("/books/:bookId/", async (request, response) => {
     response.status(500).json({ error: error.message });
   }
 });
+
+module.exports = app;
+
