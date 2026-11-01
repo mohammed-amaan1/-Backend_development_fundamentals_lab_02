@@ -11,8 +11,7 @@
 
 ## Live Link
 
-**Deployment URL:** Not applicable (local SQLite database environment; all endpoints verified and documented with Postman and SQLite CLI screenshots below).
-
+https://backend-development-fundamentals-lab-02.onrender.com/
 ## Objective
 
 To connect an Express server to a SQLite database and expose CRUD (Create, Read, Update, Delete) operations over HTTP using asynchronous handling and parameterized SQL queries.
